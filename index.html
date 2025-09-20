@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name = "viewport" content="width=device-width, initial-scale=1.0" />
+<title>aylin's personal website</title>
+<script src="https://cdn.jsdelivr.net/npm/p5@1/lib/p5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/p5play@3/p5play.min.js"></script>
+<link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Moirai+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Moirai+One&display=swap" rel="stylesheet">
+</head>
+<script src="sketch.js"></script>
+</html>
+
+<body>
+  <header>
+    <h1>aylin's personal website (ᵕ—ᴗ—)</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#likesandDislikes">My likes and dislikes</a>
+      <a href="#otherstuff">Other stuff</a>
+      <a href="#contact">Contact (ฅ՞•ﻌ•՞ฅ) </a>
+    </nav>
+  </header>
+
+
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="assets/myMelody1.png" alt="My Melody" width="200">
+    <p>Hi!! My name is Aylin (pronounced ay-len or however u can say it lol) <br> I was born in Honduras and I'm fluent in both English AND Spanish ᕙ( ᗒᗣᗕ )ᕗ <br> I'm 15 years old and my birthday is on October 31st (👻) I'm currently a junior in high school.<br> My plans after high school are to go somewhere near the upper east coast or California (might change!!) during my university years which I'm really excited for regardless of what people say about them LOL (ᵕ—ᴗ—) <br> I'm new to coding but I made this website myself using tutorials and the help of strangers on the internet :3 <br> Check below to see more stuff about me! (ex: social media)</p>
+  </section>
+
+  <section id="likesandDislikes">
+    <h2>My likes</h2>
+    <img src="assets/myMelody2.png" alt="My Melody" width="200">
+    <p>I LOVE a lot of music, series, and games, that they would genuinely not fit in this whole screen..<br>But some of my all-time favorite games/series/music artists are: ALNST, Young Sheldon, Given, A Sign of Affection <br> Pjsk, Genshin, Stardew Valley, Roblox, Skullgirls <br> i-dle, LESSERAFIM, keshi, Cigarettes After Sex, Wave to Earth, Ado, N25, and many more (ദ്ദി ˉ͈̀꒳ˉ͈́ )✧ </p>
+    
+    <h2>My dislikes</h2>
+    <img src="assets/myMelody3.gif" alt = "My Melody" width="200">
+    <p>I don't really dislike a lot of stuff unless it's CLEARLY something bad or just weird in general..<br> I do dislike loud people and dirty/messy spaces since they make me unable to concentrate and just make my mood bad overall ( ;´ - `;) </p>
+
+  </section>
+
+  <section id="otherstuff">
+    <h2>Other stuff</h2>
+    <p> This section is just for more random facts about me <br> and more of my interests and goals, feel free to read if you want! <br> ----------------------------------------------------------------------------------- <br> I've always been interested in compsci (especially game development) so I decided to <br> join a few programs too see if it was really for me (spoiler alert: it isn't LOL.) <br> However, I do find it really intriguing and amazing when I do understand what I'm doing. <br> I'm now wanting to pursue Law (don't rlly know what field yet) or might pursue something psychology related <br> I love video games so much, like a lot. Top 10 things ever created. I also love Ao3, top 10 creations oat. <br> I hate math a lot, I'm like really bad at it. <br> I'm scared of onions so that automatically makes me hate all vegetables srry vegetable lovers.</p>
+  </section>
+
+  <section id = "contact">
+  <h2>Contact</h2>
+  <img src = "assets/melodycursor.png" alt="My Melody" width="200">
+  <p>My Slack and Discord dms are always open for whatever reason <br> you might have to contact me :3 <br> Also PLEASE don't be scared to dm me if you'd wanna be friends <br> or just have a talk about any of my mentioned interests, I'll probably reply quickly. („• ֊ •„)੭ </p>
+  </section>
+
+
+  <section id="sketch-container"></section>
+
+  /keep script below body/
+  <script src = "sketch.js"></script>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+
+  <script>
+
+  // get all nav links and sections (the clickable text basically)
+  const navLinks = document.querySelectorAll("nav a");
+  const sections = document.querySelectorAll("section");
+
+  navLinks.forEach(link => {
+  link.addEventListener("click", e => {
+  e.preventDefault();
+
+  // get the targect section
+  const targetId = link.getAttribute("href");
+  const targetSection = document.querySelector(targetId);
+
+  // add "active" so the target section becomes visible
+  targetSection.classList.add("active");
+
+  // scroll 
+  targetSection.scrollIntoView({ behavior: "smooth" });
+
+  });
+  });
+
+
+
+</script>
+</body>
+</html>

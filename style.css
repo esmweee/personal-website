@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+/*base*/
+  body {
+    font-family: "Morai One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background: #fffefe; 
+    color: #fffefe;
+    line-height: 1.6;
+    text-align: center;
+    -webkit-font-smoothing: antialised;
+    
+    }
+
+/*header*/
+  header {
+  background: #ffbad6;
+  color: #fffefe;
+  padding: 0;
+  margin: 0;
+  }
+
+  header h1 {
+  font-family: "Morai One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.7rem;
+  margin-bottom: 6px;
+  }
+  p {
+  margin-bottom: 1.2em;
+  line-height: 1.6;
+  color: #ffbad6;
+  }
+
+  /*nav a*/
+
+  nav a {
+  margin: 0 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+  }
+
+  nav a:hover {
+    color: #ff8ab7;
+
+  }
+
+  /*canvas container*/
+
+  #sketch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  max-width: 90%;
+  padding: 0;
+  }
+
+/*make the canvas responsive and centered in the middle*/
+
+  canvas {
+  border: 2px solid #ff8ab7;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+  }
+
+ /* sections with the fade in animation*/
+
+  section {
+  opacity: 0;
+  visibility: hidden; 
+  transition: opacity 0.6s ease-in-out, visibility 0s linear 0.6s;
+  
+  }
+
+  section.active {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+
+  }
+
+  h2 {
+  font-family: 'Playfair Display', Oswald;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #ff8ab7;
+  }
+
+  p {
+  margin-bottom: 1.2em;
+  line-height: 1.6;
+  color: #ffbad6;
+  }
+
+  footer {
+  margin-top: 40px;
+  padding: 15px;
+  background: #ffbad6;
+  color: #ffbad6;
+  font-size: 14px;
+  }
+  @media (max-width: 786px) {
+   body {
+   font-size: 14px; 
+  }
+
+  header h1 {
+   font-size: 1.5rem;
+
+  }
+
+  nav a {
+   display: block;
+   margin: 10px 0;
+  }
+
+  #sketch-container {
+   max-width: 100%;
+   padding: 0 10px;
+  }
+
+    canvas {
+     width: 100%;
+     height: auto;
+    }
+  
+    section {
+      margin: 15px auto;
+      padding: 0 10px;
+    }
+  
+  img {
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+  }
+  } /*close media thing*/
+
+
+/* custom cursor */ 
+body {
+  cursor: url("../assets/melodycursor.png") 16 16, auto;
+}
+
+a, button {
+  cursor: url("../assets/melodycursor.png") 16 16, pointer;
+
+}
+
+
+
+
